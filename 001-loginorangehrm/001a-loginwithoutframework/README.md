@@ -7,6 +7,63 @@ This project automates the login process of the OrangeHRM demo website using Sel
 - **Java**: Programming language used.
 - **Selenium WebDriver**: Tool used for automating web applications.
 - **ChromeDriver**: WebDriver implementation for Chrome browser.
+- **Maven**: Dependency management and build tool.
+
+## pom.xml
+
+To use the necessary libraries and dependencies for Selenium, you'll need a `pom.xml` file. Below is a basic `pom.xml` configuration that includes the necessary dependencies for this project:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.orangehrm</groupId>
+    <artifactId>orangehrm-login-automation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- Selenium WebDriver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.8.1</version> <!-- Latest version, check for updates -->
+        </dependency>
+        
+        <!-- WebDriver Manager (for ChromeDriver management) -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version> <!-- Latest version, check for updates -->
+        </dependency>
+        
+        <!-- JUnit (for testing purposes) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.2</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- Log4j (optional for logging purposes) -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+        
+    </dependencies>
+</project>
+```
+## This pom.xml includes dependencies for:
+
+- Selenium WebDriver (to automate the browser).
+- WebDriver Manager (to automatically handle the required browser driver, such as ChromeDriver).
+- JUnit (if you want to add tests or assertions).
+- Log4j (optional for logging, if you choose to add logging in your project).
+---
 
 ## Code
 
