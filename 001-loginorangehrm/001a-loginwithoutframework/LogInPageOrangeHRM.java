@@ -41,19 +41,16 @@ public class LogInPageOrangeHRM {
        //7. click the button
         loginButton.click();
 		
+	// 8. Assert for success message
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-topbar-header-breadcrumb")));
+        String messageText = successMessage.getText();
+        if (messageText.contains("Dashboard") || messageText.contains("Logged In Successfully")) {
+            System.out.println("Login successful: " + messageText);
+        } else {
+            System.out.println("Login failed or unexpected result.");
+        }	
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 	}
 
 }
