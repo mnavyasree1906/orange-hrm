@@ -38,4 +38,10 @@ public class LoginPage {
     public String getDashboardText() {
         return driver.findElement(dashboardBreadcrumb).getText();
     }
+     // New method to enter both username and password
+    public void login(String username, String password) {
+        enterUsername(username);
+        enterPassword(password);
+        clickLoginButton();
+    }
 }

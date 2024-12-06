@@ -48,10 +48,8 @@ public class LoginTest {
         // Navigate to URL
         driver.get(properties.getProperty("app.url"));
 
-        // Login actions
-        loginPage.enterUsername(properties.getProperty("login.username"));
-        loginPage.enterPassword(properties.getProperty("login.password"));
-        loginPage.clickLoginButton();
+        // Login actions using the new login method
+        loginPage.login(properties.getProperty("login.username"), properties.getProperty("login.password"));
 
         // Assertion
         Assert.assertTrue(loginPage.isDashboardDisplayed(), "Login failed: Dashboard not displayed.");
